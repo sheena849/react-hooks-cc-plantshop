@@ -1,46 +1,59 @@
 {
   "plants": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Aloe",
       "image": "./images/aloe.jpg",
       "price": 15.99
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": 25.98,
+      "inStock": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
       "price": 5.99
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Pothos",
       "image": "./images/pothos.jpg",
       "price": 12.11
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Jade",
       "image": "./images/jade.jpg",
       "price": 10.37
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Monstera Deliciosa",
       "image": "./images/monstera.jpg",
       "price": 25.99
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "id": "b485",
+      "name": "Snake Plant",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZBhyAZ1Wi7ZZbK9kbYUtByOpaEnTbWR6WQ&s",
+      "price": 18.5
+    },
+    {
+      "id": "4b05",
+      "name": "Pitcher Plant",
+      "image": "https://i.natgeofe.com/k/2ed74677-f079-44a1-a3b3-30fad83edab5/a-8-carnivorous-plants-pitcher-plants_16x9.jpg",
+      "price": "30.00"
     }
   ]
 }
