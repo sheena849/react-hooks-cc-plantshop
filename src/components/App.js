@@ -6,9 +6,9 @@ import PlantPage from "./PlantPage";
 function App() {
   return (
     <div className="app">
-      {/* Header displays the app title */}
+     
       <Header />
-      {/* Main content where plants are managed */}
+      
       <PlantPage />
     </div>
   );

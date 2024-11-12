@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 
-// NewPlantForm component to add a new plant
 function NewPlantForm({ onAddPlant }) {
   // Setting initial state for the form inputs
   const [formData, setFormData] = useState({
-    name: "",   // The name of the plant
-    image: "",  // The image URL for the plant
-    price: "",  // The price of the plant
+    name: "",   
+    image: "",  
+    price: "", 
   });
 
   // Function to handle changes in form inputs
   const handleChange = (e) => {
-    const { name, value } = e.target; // Get the input name and value
-    setFormData({ ...formData, [name]: value }); // Update form data with the new input value
+    const { name, value } = e.target; 
+    setFormData({ ...formData, [name]: value }); 
   };
 
   // Function to handle form submission
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
-    onAddPlant(formData); // Pass the form data to the parent (PlantPage) to add the new plant
-    setFormData({ name: "", image: "", price: "" }); // Clear the form inputs after submission
+    e.preventDefault(); 
+    onAddPlant(formData);
+    setFormData({ name: "", image: "", price: "" }); 
   };
 
   return (
