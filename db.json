@@ -48,12 +48,6 @@
       "name": "Snake Plant",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZBhyAZ1Wi7ZZbK9kbYUtByOpaEnTbWR6WQ&s",
       "price": 18.5
-    },
-    {
-      "id": "4b05",
-      "name": "Pitcher Plant",
-      "image": "https://i.natgeofe.com/k/2ed74677-f079-44a1-a3b3-30fad83edab5/a-8-carnivorous-plants-pitcher-plants_16x9.jpg",
-      "price": "30.00"
     }
   ]
 }

@@ -12,7 +12,7 @@ function PlantPage() {
 
   // Fetch plants data when the component first loads
   useEffect(() => {
-    fetch("http://localhost:3000/plants")
+    fetch("http://localhost:6001/plants")
       .then((res) => res.json()) // Parse the response as JSON
       .then(setPlants) // Set the fetched plants data to state
       .catch((err) => setError("Failed to load plants")); // Catch and handle any errors
@@ -20,7 +20,7 @@ function PlantPage() {
 
   // Handles adding a new plant
   const handleAddPlant = (newPlant) => {
-    fetch("http://localhost:3000/plants", {
+    fetch("http://localhost:6001/plants", {
       method: "POST", // Sending data to the server
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newPlant), // Send new plant data in JSON format
@@ -32,7 +32,7 @@ function PlantPage() {
 
   // Deletes a plant by ID
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/plants/${id}`, { method: "DELETE" }) // Send a DELETE request to the server
+    fetch(`http://localhost:6001/plants/${id}`, { method: "DELETE" }) // Send a DELETE request to the server
       .then(() => setPlants(plants.filter((plant) => plant.id !== id))) // Remove deleted plant from state
       .catch(() => setError("Failed to delete plant")); // Handle errors
   };
@@ -40,7 +40,7 @@ function PlantPage() {
   // Updates a plant's stock status (inStock or sold out)
   const handleUpdateStock = (id) => {
     const updatedPlant = plants.find((plant) => plant.id === id); // Find the plant by its ID
-    fetch(`http://localhost:3000/plants/${id}`, {
+    fetch(`http://localhost:6001/plants/${id}`, {
       method: "PATCH", // Update request
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ inStock: !updatedPlant.inStock }), // Toggle inStock status
@@ -56,7 +56,7 @@ function PlantPage() {
   const handleUpdatePrice = (id) => {
     const newPrice = prompt("Enter the new price:"); // Prompt the user for a new price
     if (newPrice && !isNaN(newPrice)) {
-      fetch(`http://localhost:3000/plants/${id}`, {
+      fetch(`http://localhost:6001/plants/${id}`, {
         method: "PATCH", // Update request
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ price: parseFloat(newPrice) }), // Send updated price to server
